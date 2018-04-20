@@ -1,0 +1,40 @@
+<!-- <div >
+  <p> Title : {{ todo?.title }}</p>
+  <p> Description : {{ todo?.description }}</p>
+  <p> Date : {{ todo?.date }}</p>
+  <p> Done : {{ todo?.done }}</p>
+  </div>
+-->
+  <ol>
+    <li>
+      <mat-form-field>
+        <input matInput [(ngModel)]="todo.title" placeholder="Title">
+      </mat-form-field>
+    </li>
+    <li>
+      <mat-form-field>
+        <input matInput [(ngModel)]="todo.description" placeholder="Description">
+      </mat-form-field>
+    </li>
+    <li>
+      <mat-form-field>
+        <input matInput [(ngModel)]="todo.date" placeholder="Date">
+      </mat-form-field>
+    </li>
+    <li>
+
+      <mat-radio-group [(ngModel)]="todo.done">
+            <mat-radio-button  value="true">true</mat-radio-button>
+            <mat-radio-button  value="false">false</mat-radio-button>
+          </mat-radio-group>
+
+      <!--
+      <mat-form-field>
+        <input matInput [(ngModel)]="todo.done" placeholder="Done">
+      </mat-form-field>
+      -->
+    </li>
+    <li>
+      <button mat-raised-button (click)="editTodo()">Edit</button>
+    </li>
+  </ol>

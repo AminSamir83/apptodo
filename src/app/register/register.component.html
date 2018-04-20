@@ -1,0 +1,39 @@
+<div class="container-card">
+<mat-card class="example-card">
+
+  <mat-card-header  class="centerClass">
+    <div > Register</div>
+  </mat-card-header>
+<form class="example-form" [formGroup]="registerForm" (ngSubmit)="getFormValue(registerForm)">
+  <mat-card-content>
+      <div class="example-container">
+          <mat-form-field>
+            <input matInput placeholder="Name" formControlName="name" type="text">
+            <mat-error *ngIf="registerForm.controls['name'].invalid"> {{getErrorMessage(registerForm.controls['name'])}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Last Name" formControlName="lastname" type="text">
+            <mat-error *ngIf="registerForm.controls['lastname'].invalid"> {{getErrorMessage(registerForm.controls['lastname'])}}</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+              <input matInput placeholder="E-mail" formControlName="email" type="email">
+              <mat-error *ngIf="registerForm.controls['email'].invalid"> {{getErrorMessage(registerForm.controls['email'])}}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Password" type="password" formControlName="password">
+                <mat-error *ngIf="registerForm.controls['password'].invalid"> {{getErrorMessage(registerForm.controls['password'])}}</mat-error>
+              </mat-form-field>
+
+              <button mat-button type="submit" [disabled]="registerForm.invalid">Validate</button>
+              <a align = "center" routerLink='/login'>I have an account</a>
+            </div>
+  </mat-card-content>
+</form>
+  <div align="center">
+
+</div>
+</mat-card>
+</div>
