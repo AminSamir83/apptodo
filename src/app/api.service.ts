@@ -9,7 +9,7 @@ export class ApiService {
   constructor(private http: Http) { }
 
   login(user) {
-    return this.http.post('http://localhost:3000/auth/login', user);
+    return this.http.post('http://13.95.214.253:3000/auth/login', user);
    }
 
 
