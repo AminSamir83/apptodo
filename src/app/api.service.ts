@@ -37,7 +37,7 @@ export class ApiService {
   }
 
   getTodosById() {
-    return (this.http.get('http://localhost:3000/api/todos/' + this.getUserId()));
+    return (this.http.get('http://13.95.214.253:3000/api/todos/' + this.getUserId()));
   }
   getTodoByIndex(index) {
     return (this.http.get('http://localhost:3000/api/todos/' + this.getUserId() + '/' + index));
