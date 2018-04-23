@@ -47,7 +47,7 @@ var ApiService = /** @class */ (function () {
     };
     ApiService.prototype.addUser = function (userr) {
         // console.log(userr);
-        return (this.http.post('http://localhost:3000/auth/register', userr));
+        return (this.http.post('http://13.95.214.253:3000/auth/register', userr));
     };
     ApiService.prototype.logout = function () {
         localStorage.removeItem('token');
@@ -71,10 +71,10 @@ var ApiService = /** @class */ (function () {
         return (this.http.get('http://13.95.214.253:3000/api/todos/' + this.getUserId()));
     };
     ApiService.prototype.getTodoByIndex = function (index) {
-        return (this.http.get('http://localhost:3000/api/todos/' + this.getUserId() + '/' + index));
+        return (this.http.get('http://13.95.214.253:3000/api/todos/' + this.getUserId() + '/' + index));
     };
     ApiService.prototype.updateTodo = function (todo, index) {
-        return (this.http.put('http://localhost:3000/api/todos/' + this.getUserId() + '/' + index, todo));
+        return (this.http.put('http://13.95.214.253:3000/api/todos/' + this.getUserId() + '/' + index, todo));
     };
     ApiService.prototype.addTodo = function (todo) {
         // console.log(userr);

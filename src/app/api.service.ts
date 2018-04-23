@@ -15,7 +15,7 @@ export class ApiService {
 
   addUser(userr) {
     // console.log(userr);
-    return (this.http.post('http://localhost:3000/auth/register', userr));
+    return (this.http.post('http://13.95.214.253:3000/auth/register', userr));
   }
 
   logout() {
@@ -40,10 +40,10 @@ export class ApiService {
     return (this.http.get('http://13.95.214.253:3000/api/todos/' + this.getUserId()));
   }
   getTodoByIndex(index) {
-    return (this.http.get('http://localhost:3000/api/todos/' + this.getUserId() + '/' + index));
+    return (this.http.get('http://13.95.214.253:3000/api/todos/' + this.getUserId() + '/' + index));
   }
   updateTodo(todo, index) {
-    return (this.http.put('http://localhost:3000/api/todos/' + this.getUserId() + '/' + index, todo));
+    return (this.http.put('http://13.95.214.253:3000/api/todos/' + this.getUserId() + '/' + index, todo));
   }
 
 
