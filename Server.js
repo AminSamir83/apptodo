@@ -20,6 +20,12 @@ const auth = require('./server/routing/auth')
 app.use('/api',api);
 app.use('/auth',auth);
 
+app.use(express.static(__dirname+"/dist"));
+
+app.use('*',(req,res)=>{
+  res.sendFile(__dirname+'/dist/index.html');
+});
+
 app.listen(port, err=>{
     if (err) throw err;
     console.log(`the server is running on port ${port}`)
