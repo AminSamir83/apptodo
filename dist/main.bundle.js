@@ -78,7 +78,7 @@ var ApiService = /** @class */ (function () {
     };
     ApiService.prototype.addTodo = function (todo) {
         // console.log(userr);
-        return (this.http.post('http://localhost:3000/api/todos/' + this.getUserId(), todo));
+        return (this.http.post('http://13.95.214.253:3000/api/todos/' + this.getUserId(), todo));
     };
     ApiService.prototype.getUserId = function () {
         if (localStorage.getItem('token')) {
